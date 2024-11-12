@@ -17,11 +17,6 @@ export default tseslint.config({
 		...tseslint.configs.stylistic,
 		eslint.configs.recommended
 	],
-	languageOptions: {
-		globals: {
-			...globals.browser
-		}
-	},
 	plugins: {
 		'react-hooks': hooksPlugin,
 		'@stylistic': stylistic,
@@ -50,5 +45,13 @@ export default tseslint.config({
 		'@stylistic/quotes': ['error', 'single'],
 		'@stylistic/semi': ['error', 'always'],
 		'tsdoc/syntax': 'error'
+	}
+},
+{
+	languageOptions: {
+		globals: {
+			...globals.node,
+			...globals.browser
+		}
 	}
 });
